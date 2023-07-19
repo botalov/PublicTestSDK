@@ -55,5 +55,5 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:4.10.0'
 
     //Carrot SDK
-    implementation 'io.carrotquest:android-sdk:1.0.64-commonRelease'
+    implementation 'io.carrotquest:android-sdk:1.0.63-commonRelease'
 }
