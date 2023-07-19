@@ -15,9 +15,9 @@ import retrofit2.Callback
 import retrofit2.Response
 import kotlin.random.Random
 
-private const val APP_ID = "3060"
-private const val API_KEY = "3060-ed66f34a99b114d5aa7161b3619"
-private const val USER_AUTH_KEY = "userauthkey-3060-2fd1047cb540b573999a9d101a9e7f54a50cf54d380bea175b1c9adf95b6252"
+private const val APP_ID = ""
+private const val API_KEY = ""
+private const val USER_AUTH_KEY = ""
 
 
 class MainActivity : AppCompatActivity() {
@@ -50,6 +50,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initCarrotSDK(){
+        if(API_KEY.isEmpty() || APP_ID.isEmpty()) {
+            Toast.makeText(this@MainActivity, "Укажите APP_ID и API_KEY", Toast.LENGTH_LONG).show()
+            return
+        }
+
         Carrot.setup(this, API_KEY, APP_ID)
 
         findViewById<Button>(R.id.open_chat_btn).setOnClickListener {
